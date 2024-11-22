@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: futura-pt, sans-serif;
+  color: #081f5c;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: #f7f2eb;
+  flex-direction: column;
+}
+.card_container {
+  background-color: #d0e3ff;
+  border-radius: 15px;
+  width: 500px;
+  padding: 30px;
+}
+
+.heading {
+  font-family: "abril-fatface", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 3rem;
+  /* flex-basis: 100%; */
+  place-content: center;
+}
+
+.textfield {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d0e3ff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.input_group {
+  display: flex;
+  gap: 50px;
+}
+
+/* hämtat från chatty */
+label {
+  width: 100px;
+  text-align: left;
+}
+
+/* hämtat från chatty */
+.checkbox {
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+.remove_button button {
+  width: 60px;
+  height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-family: futura-pt, sans-serif;
+  color: #f7f2eb;
+  background-color: #081f5c;
+  border: #d0e3ff;
+  cursor: pointer;
+}
+
+.remove_button button:hover {
+    color: #081f5c;
+    background-color: #f7f2eb;
+    transition: background-color 0.6s; 
+}
+
+.empty_div {
+  border: 1px solid #081f5c;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* .card_container div {
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  place-content: center;
+} */
