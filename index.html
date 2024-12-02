@@ -4,27 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grupp 26</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/nhm1uap.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nhm1uap.css" />
   </head>
   <body>
     <h1 class="heading">Labb 1 - Grupp 26</h1>
     <div class="card_container">
-      <div class="input_group">
-        <label class="color" for="color">Färg</label>
-        <input type="text" name="color" id="color" class="textfield">
-      </div>
-      <div class="input_group">
-        <label for="content">Innehåll</label>
-        <input type="text" name="content" id="content" class="textfield">
-      </div>
-      <div class="input_group">
-        <label for="divStyle">Stil på box</label>
-        <input type="checkbox" name="divStyle" id="divStyle" class="checkbox">
-      </div>
-      <div id="buttonStyle" class="remove_button">
-        <button>Ta bort</button>
-      </div>
+      <form id="settings" class="settings">
+        <div class="input_group">
+          <label class="color" for="color">Färg</label>
+          <input type="text" name="color" id="color" class="textfield" />
+        </div>
+        <div class="input_group">
+          <label for="content">Innehåll</label>
+          <input type="text" name="content" id="content" class="textfield" />
+        </div>
+        <div class="input_group">
+          <label for="divStyle">Stil på box</label>
+          <input
+            type="checkbox"
+            name="divStyle"
+            id="divStyle"
+            class="checkbox"
+          />
+        </div>
+        <div id="buttonStyle" class="remove_button">
+          <button>Ta bort</button>
+        </div>
+      </form>
       <div class="empty_div"></div>
     </div>
     <script src="script.js"></script>
