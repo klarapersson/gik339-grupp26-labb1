@@ -4,7 +4,6 @@ body {
   color: #081f5c;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   background-color: #f7f2eb;
   flex-direction: column;
 }
@@ -20,7 +19,6 @@ body {
   font-weight: 400;
   font-style: italic;
   font-size: 3rem;
-  /* flex-basis: 100%; */
   place-content: center;
 }
 
@@ -39,13 +37,11 @@ body {
   gap: 50px;
 }
 
-/* hämtat från chatty */
 label {
   width: 100px;
   text-align: left;
 }
 
-/* hämtat från chatty */
 .checkbox {
   margin-left: 0px;
   cursor: pointer;
@@ -75,10 +71,3 @@ label {
   border-radius: 10px;
   padding: 10px;
 }
-
-/* .card_container div {
-  gap: 1rem;
-  flex-wrap: wrap;
-  flex-basis: 100%;
-  place-content: center;
-} */
