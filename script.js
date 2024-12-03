@@ -88,4 +88,3 @@ buttonStyleElement.addEventListener("click", (e) => {
     console.log("Div-elementet är redan borttaget");
   }
 });
- 
