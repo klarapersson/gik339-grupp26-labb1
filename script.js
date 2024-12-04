@@ -9,21 +9,19 @@ const textfieldCollection = document.getElementsByClassName("textfield");
 console.log(textfieldCollection);
 
 // Hämta knappen med id "buttonStyle" och skriva ut det i konsolen
-const buttonStyleElement = document.querySelector("#buttonStyle");
+const buttonStyleElement = document.querySelector("#buttonStyle button");
 console.log(buttonStyleElement);
 
 // Hämta alla div-element med klassen "empty_div" och skriva ut det i konsolen
 const emptyDivElement = document.querySelectorAll(".empty_div");
 console.log(emptyDivElement);
 
-
-
 // Uppgift 5
 function handleInputEvent(e) {
   // Skriver ut vilken input som triggat eventet
   console.log(e.target);
 
-  // Hämtar name-attributet
+  // Hämtar name-attributet från det element som triggat eventet
   const inputName = e.target.name;
 
   // Kollar om name-attributet är "content"
@@ -39,34 +37,28 @@ function handleInputEvent(e) {
   }
 }
 
-// Hämta alla input-element med klassen "textfield"
-const inputs = document.querySelectorAll(".textfield");
 // Loopa igenom varje input-element och lägg till eventlyssnare
-inputs.forEach((input) => {
-  // Lägg till en eventlyssnare som lyssnar på "input"- händelse
+for (let i = 0; i < textfieldCollection.length; i++) {
+  const input = textfieldCollection[i];
+  
+  // Lägg till en eventlyssnare som lyssnar på "input"-händelsen
   input.addEventListener("input", handleInputEvent);
-  // Lägg till en eventlyssnare som lyssnar på "blur" händelsen
+  
+  // Lägg till en eventlyssnare som lyssnar på "blur"-händelsen
   input.addEventListener("blur", handleInputEvent);
-});
+}
 
 // Uppgift 6
 checkboxElement.addEventListener("change", (e) => {
-  e.preventDefault(); // Förhindra att formuläret skickas
+  e.preventDefault(); // Förhindra standardbeteende om det behövs
 
-  // Hämtar referensen till färgfältet från formuläret
-  const colorInput = settings.color;
+  // Hämta färgvärdet från inputfältet
+  const colorValue = settings.color.value;
 
-  // Kolla om checkboxen är markerad
-  if (checkboxElement.checked) {
-    // Om checkboxen är markerad, hämta färgvärdet från inputfältet
-    const colorValue = colorInput.value;
-
-    // Ändra bakgrundsfärgen på det första div-elementet
-    emptyDivElement[0].style.backgroundColor = colorValue;
-  } else {
-    // Om checkboxen inte är markerad, återställ bakgrundsfärgen
-    emptyDivElement[0].style.backgroundColor = ""; // återställ till standardfärg
-  }
+  // Ändra bakgrundsfärgen på det tomma div-elementet
+  emptyDivElement.forEach((div) => {
+    div.style.backgroundColor = colorValue || ""; // Sätt bakgrundsfärgen till den valda färgen eller en tom färg
+  });
 });
 
 
